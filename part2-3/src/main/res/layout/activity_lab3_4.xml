@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- autoLink -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="가나다라 http://naver.com 마바사 realso0@naver.com 아자차카타 010-7533-5557"
+        android:autoLink="web|email|phone"/>
+
+    <!-- maxLine, ellipsize -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/long_text"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+
+    <!-- Custom Font -->
+    <TextView
+        android:id="@+id/fontView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom Font"
+        android:layout_marginTop="16dp"/>
+
+    <!-- ImageView maxWidth, maxHeight -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sample"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <!-- inputType(여러 옵션 존재함), gravity 정렬 옵션 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress|textMultiLine"
+        android:hint="전화번호 입력"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <!-- CheckBox -->
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="is unChecked"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

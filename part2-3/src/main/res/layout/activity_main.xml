@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7FB08">
+
+    <!-- 뷰 내부적으로 스마트폰 크기에 대응하는 적절한 뷰 크기를 동적으로 계산하기 위해 대부분 절대 크기를 지정하지 않음 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:textSize="32sp"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF"/>
+
+    <!-- fill_parent, match_content 는 부모 계층의 뷰가 지정한 크기에 꽉 들어차게 자동으로 결정 -->
+    <!-- wrap_content 는 적절한 크기를 자동으로 결정 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="world"
+        android:background="#0000FF"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button1"
+        android:padding="24dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button2"
+        android:layout_marginLeft="16dp"/>
+</LinearLayout>
+
+

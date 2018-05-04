@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>  <!-- 앱의 메인환경 파일 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.androidlab"> <!-- package는 앱의 식별자 정보로, 그레이들 파일에 설정된 applicationId 값과 같음.(유일무이함) -->
+
+    <!-- application 태그는 앱의 구성요소를 등록하기 위한 태그 -->
+    <!-- 컴포넌트 클래스들은 AndroidManifest.xml에 등록해야 하며, application 태그의 하위 태그로 등록하게됨(여기서는 activity 태그) -->
+    <!-- xml 속성값이 @로 지정되었다는 건 res 하위 폴더의 리소스들을 지칭함(즉, @이 붙은 것들은 전부 R.java 에 int형 변수로 등록되어 있다는 것임) -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 컴포넌트 클래스 등록 부분 -->
+        <!-- 컴포넌트 등록시, name 속성은 생략할 수 없음(name 속성은 등록하고자 하는 클래스명을 명시하기 위한 속성) -->
+        <!-- MainActivity 클래스를 액티비티로 등록하는 구문으로, 안드로이드 컴포넌트 클래스는 개발자 클래스이지만, 생명 주기를 안드로이드 시스템이 관리하므로, 설정에서 등록하게 됨. -->
+        <activity android:name=".MainActivity">
+            <!-- 사용자가 앱의 아이콘 클릭 시, 실행되는 액티비티를 설정하는 용도로, intent-filter 설정에 따라, 사용자가 아이콘 클릭 시 MainActivity 가 실행됨. -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

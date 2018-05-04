@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Button,  TextView 등의 안드로이드 라이브러리에 이미 있는 뷰 클래스들임 -->
+    <!-- 예를 들어, @+id/myText 라고 설정하면 개발자가 임의의 이름으로 id 값을 부여한 것임. 지정한 id 값은 해당 앱의 R.java 파일에 등록됨. -->
+    <Button
+        android:id="@+id/btn_visible_true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="visible true"/>
+
+    <TextView
+        android:id="@+id/text_visible_target"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello world"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_visible_false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="invisible false"/>
+</LinearLayout>
