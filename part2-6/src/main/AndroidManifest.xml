@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 앱의 메인 환경 파일 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.user.part2_3">
+    package="com.example.user.part2_6">
 
     <application
         android:allowBackup="true"
@@ -11,20 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Lab3_3Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".Lab3_4Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

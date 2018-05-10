@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- orientation 이 vertical 이므로, 아래에서 실제 layout_gravity 는 center_horizontal 만 적용됨. -->
+
+    <!-- layout_gravity 속성은 뷰를 어느 영역에 나타낼지 설정 -->
+    <!-- gravity 속성은 뷰의 내용을 뷰 영역 내에서 어디에 나타낼지 설정 -->
+    <!-- wrap_content 는 글자에 맞게 뷰 영역을 조절하는 속성 -->
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="HelloWorld"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="bottom|right"/>
+
+    <!-- 세로가 전부 0이므로, 비율로 뷰를 나눔. -->
+    <!-- 뷰의 내용을 전부 center 로 이동. -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FF0000"
+        android:text="첫번째"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#00FF00"
+        android:text="두번째"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0000FF"
+        android:text="세번째"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -22,7 +22,9 @@ public class Lab3_4Activity extends AppCompatActivity {
         textView.setTypeface(typeface);
 
         //CheckBox 이벤트 프로그램
+        //View 객체 획득(findViewById 함수 이용)
         checkBox=(CheckBox)findViewById(R.id.checkbox);
+        //버튼 이벤트 등록과 동시에 콜백함수로 이벤트 구현
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

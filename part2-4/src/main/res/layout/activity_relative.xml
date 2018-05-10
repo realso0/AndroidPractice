@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RelativeLayout, TextView 모두 하나의 뷰 객체라고 할 수 있다. 똑같은 뷰를 보여주기 위해서, 생성되는 뷰 객체의 수는 LinearLayout 보다 RelativeLayout 이 적다. 그러므로, RelativeLayout
+  이 더 성능상 좋다.(객체 생성은 공짜가 아니며, 애플리케이션의 성능에 영향을 줌) -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- 기준이 되는 상대 뷰를 지칭하고자 모든 뷰에 id 속성을 지정하였음. -->
+    <ImageView
+        android:id="@+id/uglystove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uglystove"
+        android:maxWidth="70dp"
+        android:maxHeight="70dp"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="홍길동"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/uglystove"/>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="안녕하세요. 잘 지내시는 지요?"
+        android:layout_below="@id/name"
+        android:layout_alignLeft="@id/name"/>
+
+    <!-- align 속성은 기준 뷰와의 위치 정렬에 이용함. -->
+    <!-- alignParent 속성은 부모(RelativeLayout) 영역을 기준으로 상화좌우로 밀 수 있는 속성임. -->
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="17.1.26"
+        android:layout_alignBaseline="@id/name"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

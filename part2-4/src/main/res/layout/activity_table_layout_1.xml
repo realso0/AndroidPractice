@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="bottom">
+
+    <TableLayout
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button android:text="7"/>
+            <Button android:text="8"/>
+            <Button android:text="9"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button android:text="4"/>
+            <Button android:text="5"/>
+            <Button android:text="6"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button android:text="1"/>
+            <Button android:text="2"/>
+            <Button android:text="3"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button android:text="."/>
+            <Button android:text="0"/>
+            <Button android:text="="/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/name"
+        android:layout_alignBottom="@id/name"
+        android:layout_alignParentTop="true">
+    <Button
+        android:id="@+id/ho1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="DEL" />
+
+    <Button
+        android:id="@+id/ho2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="÷"
+        android:layout_below="@id/ho1"
+        android:layout_alignLeft="@id/ho1"/>
+
+    <Button
+        android:id="@+id/ho3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="X"
+        android:layout_below="@id/ho2"
+        android:layout_alignLeft="@id/ho1"/>
+
+    <Button
+        android:id="@+id/ho4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="-"
+        android:layout_below="@id/ho3"
+        android:layout_alignLeft="@id/ho1"/>
+
+    <Button
+        android:id="@+id/ho5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="+"
+        android:layout_below="@id/ho4"
+        android:layout_alignLeft="@id/ho1"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

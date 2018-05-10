@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TabHost 로 전체 감싸기 -->
+<!-- @+id/host 는 java 코드에서 사용하기 위해, 임의의 id를 부여하여, id값을 앱의 R.java 파일에 등록하여 이용하겠다는 의도임. -->
+<!-- xml 에 TabHost 뷰를 등록하고 등록된 뷰를 자바 코드에서, findViewById() 함수로 획득하는 구조. -->
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/host"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TabHost = tabs(Indicator) + tabcontent(Tab Content) 로 구성되어 있음. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- tabs, tabcontent id는 이미 만들어져 있음.(반드시 id는 정해진 id를 사용해 주어야함. -->
+        <!-- @strings/long_text 처럼 @android:id/tabs 는 만들어져 있는 자원을 가져다 쓰는 것임. -->
+        <!-- 안드로이드 라이브러리의 R.java 파일에 등록된 것을 이용하겠다는 의도임. -->
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"/>
+
+        <!-- 본문은 반드시 FrameLayout 으로 작성. -->
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/tab_content1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/uglystove"
+                    android:maxWidth="70dp"
+                    android:maxHeight="70dp"
+                    android:adjustViewBounds="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="홍길동"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="안녕하세요. 잘 지내시는 지요?"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17.1.26"
+                    android:layout_marginLeft="16dp"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tab_content2">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="#FF0000"/>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="#00FF00"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="#0000FF"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/tab_content3">
+
+                <!-- Button,  TextView 등의 안드로이드 라이브러리에 이미 있는 뷰 클래스들임 -->
+                <!-- 예를 들어, @+id/myText 라고 설정하면 개발자가 임의의 이름으로 id 값을 부여한 것임. 지정한 id 값은 해당 앱의 R.java 파일에 등록됨. -->
+                <Button
+                    android:id="@+id/btn_visible_true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="visible true"/>
+
+                <TextView
+                    android:id="@+id/text_visible_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="hello world"
+                    android:background="#FF0000"
+                    android:textColor="#FFFFFF"
+                    android:padding="16dp"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/btn_visible_false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="invisible false"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</TabHost>
